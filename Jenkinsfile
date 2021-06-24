@@ -30,7 +30,7 @@ pipeline {
             withCredentials([usernamePassword(credentialsId: 'confluent-cloud', usernameVariable: 'CLUSTER_API_KEY', passwordVariable: 'CLUSTER_API_SECRET')]) {
               sh './scripts/build-connection-file.sh > topology-builder.properties'
           }
-              sh "kafka-topology-builder.sh  --brokers ${params.BROKERS} --clientConfig topology-builder.properties --topology ${params.TOPOLOGY} --allowDelete"
+              sh "julie-ops-cli.sh  --brokers ${params.BROKERS} --clientConfig topology-builder.properties --topology ${params.TOPOLOGY} --allowDelete"
           }
       }
    }
