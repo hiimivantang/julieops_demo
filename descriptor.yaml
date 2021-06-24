@@ -7,4 +7,4 @@ projects:
       - name: "testp12r3"
         config:
           replication.factor: "3"
-          num.partitions: "20"
+          num.partitions: "15"
