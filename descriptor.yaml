@@ -7,6 +7,6 @@ projects:
       - name: "testp12r3.json"
         config:
           replication.factor: "3"
-          num.partitions: "15"
+          num.partitions: "4"
     producers:
       - principal: "User:julie-test-producer"
